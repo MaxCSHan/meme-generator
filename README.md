@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![image](https://github.com/MaxCSHan/meme-generator/blob/master/Just%20another%20meme.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
