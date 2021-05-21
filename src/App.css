@@ -2,6 +2,7 @@ html, body{
   width: 100%;
 }
 .App {
+  position: relative;
   text-align: center;
   min-height: 100vh;
   background-color: #282c34;
@@ -13,7 +14,8 @@ html, body{
 
 
 .App-header {
-  margin-top: 5rem;
+  position: relative;
+  margin-top: 8rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +56,86 @@ input{
   align-items: center;
 }
 .download-btn{
-  margin-top: 2rem;
-  width:60%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  width:10rem;
   color:#282c34;
   cursor: pointer;
   background:#adff2f;
   padding:0.5rem;
   border-radius: 0.2rem;
+}
+
+#imageInput{
+  display: none;
+}
+
+.navbar-container{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  background: #282c34;
+
+}
+.navbar-title{
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.navbar-btns{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.navbar-btn{
+ font-weight: 500;
+  padding: 0.5rem;
+  background-color: none;
+  transition: 0.25s ease ;
+}
+.navbar-btn:hover{
+  background-color: #adff2f;
+  color: #282c34;
+
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
