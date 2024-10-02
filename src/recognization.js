@@ -42,12 +42,15 @@ const Recognization = (props) => {
   };
   const handleImage = (e) => {
     const file = document.getElementById(`imageInput${id}`).files[0];
-    const fr = new FileReader();
-    fr.readAsDataURL(file);
-    fr.onloadend = (e) => {
-      setImgUrl(e.target.result);
-    };
-    console.log(file, fr, fr.result);
+    if(file){
+      const fr = new FileReader();
+      fr.readAsDataURL(file);
+      fr.onloadend = (e) => {
+        setImgUrl(e.target.result);
+      };
+      console.log(file, fr, fr.result);
+    }
+    
     // setImgUrl(fr.result);
   };
   // const somethingOnChange = (event) => {
@@ -116,11 +119,11 @@ const Recognization = (props) => {
         Browse...
       </label>
       <input
-        className="download-btn"
         type="file"
         id={`imageInput${id}`}
         accept="image/*"
         onChange={handleImage}
+        class="hidden"
       ></input>
 
       <canvas ref={canvasRef} id={`recCanvas${id}`} />

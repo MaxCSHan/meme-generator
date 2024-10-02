@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "make-your-meme"
+    "default": "make-your-meme",
+    "staging": "untility-9beeb"
   }
 }
